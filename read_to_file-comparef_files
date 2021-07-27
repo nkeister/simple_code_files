@@ -1,0 +1,31 @@
+//reads files and also compares 2 different files strings
+void read_file(char count2[16])
+{
+    FILE *infile = fopen("export2.txt", "r");
+    FILE *outfile = fopen("export.txt", "r");
+    char buf[16];
+    char buf2[16];
+
+    fscanf(infile, "%s", buf); //read string from file
+    //printf("%s", buf);
+
+    fscanf(outfile, "%s", buf2); //read string from file
+    //printf("\n%s\n", buf2);
+
+    if (strcmp(buf, buf2) == 0) //compare if files are the same
+    {
+        printf(B_BOLD "ACCESS GRANTED\n" RESET);
+    }
+    else if (strcmp(buf, buf2) != 0) //compare if files are different
+    {
+        printf(R_BOLD "INCORRECT PASSWORD! EXITING NOW\n" RESET);
+        exit(0);
+    }
+    else
+    {
+        printf("no idea\n");
+    }
+
+    fclose(outfile);
+    fclose(infile);
+}
