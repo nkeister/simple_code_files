@@ -1,0 +1,28 @@
+//C++
+char num;
+  
+  while(1)
+  {
+    cout << "enter num: ";
+    cin >> num;
+
+    switch(num)
+    {
+      case '0':
+        printf("A\n");
+        break;
+
+      case '1':
+        printf("B\n");
+        break;
+
+      case '2':
+        printf("C\n");
+        break;
+
+      default:
+        printf("invalid\n");
+    }
+  }
+  
+  return 0;
