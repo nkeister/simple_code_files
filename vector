@@ -1,0 +1,32 @@
+/*
+    create vector and print elements inside vector
+*/
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() 
+{
+  vector<int> vector_one;
+  int temp1;
+  int count = 0;
+  
+  cout << "enter an integer to store in vector: ";
+  while(1)
+    {
+    cin >> temp1;
+    vector_one.push_back(temp1);
+
+    for(auto i = vector_one.begin(); i != vector_one.end(); i++)
+    {
+      printf("vec[%d] = %d -> ", count, *i);
+      count++;//counter to hold vector element
+    }
+    count = 0;//reset count
+    cout << endl;
+  }
+
+  return 0;
+}
