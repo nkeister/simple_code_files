@@ -1,0 +1,64 @@
+/*
+    simple class to get user int, char, string input and print from class
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Temp
+{
+  private:
+    int one;
+    char two;
+    string three;
+  public:
+    Temp();
+    //Temp(int one, char two);
+    int get_int(int one_temp);
+    void get_char(char two_temp);
+    void get_string(string three_temp);
+};
+
+Temp::Temp()
+{
+  one = 0;
+  two = ' ';
+}
+
+int Temp::get_int(int one_temp)
+{
+  printf("in INT function %d \n", one_temp); 
+}
+
+void Temp::get_char(char two_temp)
+{
+  printf("in CHAR function %c\n", two_temp); 
+}
+
+void Temp::get_string(string three_temp)
+{
+  cout << "in STRING function " << three_temp << endl;
+}
+
+// To execute C++, please define "int main()"
+int main() 
+{
+  Temp test;
+  int temp1;
+  char temp2;
+  string temp3;
+  
+  printf("enter an integer: ");//get int using class
+  cin >> temp1;
+  test.get_int(temp1);
+  
+  printf("enter a char: ");//get char using class
+  cin >> temp2;
+  test.get_char(temp2);
+  
+  printf("enter a string: ");//get string using class
+  cin >> temp3;
+  test.get_string(temp3);
+  
+  return 0;
+}
