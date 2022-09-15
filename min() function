@@ -1,0 +1,6 @@
+//min function used in C
+
+int min(long long a, long long b)//double long for big input #'s
+{
+    return (a > b) ? b : a;//return for min function
+}
