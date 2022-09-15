@@ -1,0 +1,20 @@
+int recursion(long long n, long long count)
+{
+    if(n == 1) //base case
+        return 0;
+    if(n%2 == 0)
+    {
+        count += 1 + recursion(n/2, count); //return 1st case
+    }
+    else
+    {
+        count += 1 + min(recursion(n-1, count), recursion(n+1, count)); //return 2nd case with min function
+    }
+    return count;
+}
+
+int main()
+{
+  int n, count;
+  return recursion(n, count);
+}
