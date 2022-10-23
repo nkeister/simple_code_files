@@ -1,0 +1,15 @@
+// function shift all element of right
+    // side from given index in left
+    public void removeAt(int index)
+    {
+        if (count > 0) {
+            for (int i = index; i < count - 1; i++) {
+ 
+                // shift all element of right
+                // side from given index in left
+                array[i] = array[i + 1];
+            }
+            array[count - 1] = 0;
+            count--;
+        }
+    }
