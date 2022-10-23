@@ -1,0 +1,18 @@
+public void addAt(int index, int data)
+    {
+        // if size is not enough make size double
+        if (count == size) {
+            growSize();
+        }
+ 
+        for (int i = count - 1; i >= index; i--)
+        {
+            // shift all element right
+            // from given index
+            array[i + 1] = array[i];
+        }
+ 
+        // insert data at given index
+        array[index] = data;
+        count++;
+    }
