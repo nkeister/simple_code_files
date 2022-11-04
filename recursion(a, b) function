@@ -18,3 +18,36 @@ int main()
   int n, count;
   return recursion(n, count);
 }
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
+class Solution {
+public:
+    int countOdds(int low, int high) {
+        
+        int count = 0;//holds #
+        
+        if ((low >= 0) && (high <= pow(10, 9)))
+        {
+            if (low <= high)
+            {
+                if (low % 2 == 1)
+                {
+                    low++;
+                    return count += 1 + countOdds(low, high); // increment count and return low and high
+                }
+                else if (low % 2 == 0)
+                {
+                    low++;
+                    return countOdds(low, high); //return low and high
+                }
+            }
+        }
+        return count; // return from func
+    }
+};
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
